@@ -10,7 +10,7 @@ export default function App() {
   const [place, setPlace] = useState('');
   const [date, setDate] = useState(today());
   const [receiptNo, setReceiptNo] = useState('');
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState([]); 
   const [received, setReceived] = useState('0');
   const [showSettings, setShowSettings] = useState(false);
   const total = useMemo(() => items.reduce((s, item) => s + (Number(item.qty) || 0) * (Number(item.rate) || 0), 0), [items]);
