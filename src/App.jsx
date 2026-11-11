@@ -5,7 +5,7 @@ const money = n => new Intl.NumberFormat('en-IN', { style: 'currency', currency:
 const today = () => new Date().toLocaleDateString('en-GB', { day: '2-digit', month: 'long', year: 'numeric' });
 
 export default function App() {
-  const [clinic, setClinic] = useState({ name: 'Matritva Ayur Care', subtitle: 'മാതൃത്വ ആയുർ കെയർ', tagline: 'COMPLETE WELLNESS FOR WOMEN', address: 'Peroor, Ettumanoor', district: 'Kottayam, Kerala', phone: '' });
+  const [clinic, setClinic] = useState({ name: 'mathritva Ayur Care', subtitle: 'മാതൃത്വ ആയുർ കെയർ', tagline: 'COMPLETE WELLNESS FOR WOMEN', address: 'Peroor, Ettumanoor', district: 'Kottayam, Kerala', phone: '' });
   const [patient, setPatient] = useState('');
   const [place, setPlace] = useState('');
   const [date, setDate] = useState(today());
@@ -87,7 +87,7 @@ export default function App() {
           <div className="receipt-topline"></div>
           <div className="receipt-content">
             <div className="receipt-header">
-              <div className="brand"><img className="clinic-logo" src="/logoayur.png" alt="Matritva Ayur Care logo"/><div className="brand-copy"><div className="brand-name">{clinic.name || 'Clinic name'}</div><div className="brand-subtitle">{clinic.subtitle}</div><div className="brand-tagline">{clinic.tagline}</div></div></div>
+              <div className="brand"><img className="clinic-logo" src="/logoayur.png" alt="mathritva Ayur Care logo"/><div className="brand-copy"><div className="brand-name">{clinic.name || 'Clinic name'}</div><div className="brand-subtitle">{clinic.subtitle}</div><div className="brand-tagline">{clinic.tagline}</div></div></div>
               <div className="clinic-address"><strong>{clinic.address}</strong><span>{clinic.district}</span>{clinic.phone && <span>{clinic.phone}</span>}<span className="receipt-number">Receipt #{receiptNo}</span></div>
             </div>
             <div className="receipt-divider"></div>
